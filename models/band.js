@@ -12,12 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate({ MeetGreet, SetTime }) {
       Band.hasMany(MeetGreet, {
         foreignKey: 'band_id',
-        as: 'meetGreets'
+        as: 'meet_greets'
       });
 
       Band.hasMany(SetTime, {
         foreignKey: 'band_id',
-        as: 'setTimes'
+        as: 'set_times'
       })
     }
   }
